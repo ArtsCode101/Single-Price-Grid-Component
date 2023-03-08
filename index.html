@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /*.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }*/
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    :root{
+      /* Netural */
+      --light-grey: hsl(204, 43%, 93%);
+      --grayish-blue: hsl(218, 22%, 67%);
+      
+      /* Primary */
+      --cyan: hsl(179, 62%, 43%);
+      --bright-yellow:hsl(71, 73%, 54%);
+    }
+    .grid-card{
+      box-shadow: -5px 10px 35px 20px rgba(0, 0, 0, 0.1);
+      grid-template-columns: 320px auto;
+      grid-template-rows: 230px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      width: 641px;
+      height: 480px;
+      grid-template-areas: 
+      "header header"
+      "leftBox rightBox"  
+    }
+    .header{
+      background-color: white;
+      grid-area: header;
+    
+    
+    }
+    .leftBox{
+      background-color: hsl(179, 63%, 41%);
+      grid-area: leftBox;
+    }
+    .rightBox{
+      background-color: var(--cyan);
+     grid-area: rightBox;
+    }
+
+    body{
+      margin 0;
+      padding 0;
+      font-family: 'Karla' , sans-serif;
+      font-size: 16px;
+      background-color: var(--light-grey);
+      width: 100%;
+    }
+    h2{
+      position: relative;
+      left: 43px;
+      top: 20px;
+    }
+    h3{
+      position: relative;
+      left: 43px;
+      top: 30px;
+    }
+    .headText{
+      position: relative;
+      left: 43px;
+      top: 25px;
+      color: var(--grayish-blue);
+    }
+    .money{
+      color: white;
+      position: relative;
+      left: 40px;
+      top: 10px;
+      
+    }
+    .button {
+    box-shadow: 3px 5px 10px 5px rgba(0, 0, 0, 0.1);;
+    top: -30px;
+    border-radius: 8px;
+    position: relative;
+    left: 30px;
+    background-color: var(--bright-yellow);
+    border: none;
+    color: white;
+    padding: 15px 95px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .moneyPack{
+    position: relative;
+    top: 5px;
+  }
+  footer{
+    position: relative;
+    top: 90px;
+    left: 490px;
+  }
+
+  @media screen and (max-width: 700px){
+    .grid-card{
+     border-radius: 7px;
+     width: 340px;
+     height: 727px ;
+     grid-template-columns: 1fr;
+     grid-template-rows:  3.9fr 1.9fr 3.2fr;
+     grid-template-areas: 
+     "header"
+     "leftBox"
+     "rightBox"
+    }
+    .headText{
+      position: relative;
+      left: 20px;
+      line-height: 28px;
+    }
+    #GreenText{
+      position: relative;
+      left: 24px;
+    }
+    footer{
+      position: relative;
+      left: 140px;
+    }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class = "grid-card">
+    <div class = "header" id="top">
+     <h2 style="color: var(--cyan);">Join our community</h2> 
+     <h3 style="color: var(--bright-yellow);" id="GreenText">30-day, hassle-free money back guarantee</h3>
+
+     <p class = "headText">Gain access to our full library of tutorials along with expert code reviews. <br> 
+       Perfect for any developers who are serious about honing their skills.</p>
+
+    </div> <!--Header Box-->
+
+
+    <div class = "leftBox" id="Lbox">
+      <h3 style="color: var(--light-grey); position: relative; top: 18px;">Monthly Subscription</h3>
+
+      <div class="moneyPack">
+        <h1 class="money">$29</h1>
+         <p style="position: relative; left: 110px; top: -38px; color: lightgrey; font-weight: lighter;">per month</p>
+      </div>
+      <p style="position: relative; left: 42px; top: -35px; color: white;">Full access for less than $1 a day</p>
+
+      <button class="button">Sign Up</button>
+
+    </div> <!--Left Box-->
+
+    <div class = "rightBox" id="Rbox">
+
+      <h3 style="position: relative; top: 20px; color: var(--light-grey);">Why Us</h3>
+      <p style="color: var(--light-grey); font-size: 15px; font-weight: lighter; position: relative; left: 45px; top: 20px;"> Tutorials by industry experts<br>
+        Peer & expert code review<br>
+        Coding exercises<br>
+        Access to our GitHub repos<br>
+        Community forum<br>
+        Flashcard decks<br>
+        New videos every week-</p>
+
+
+    </div> <!--Right Box-->
+
+  </div> <!--Grid Card-->
+  
+  <footer>
+
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Atharv Adhyapak</a>.
+    </p>
+  </footer>
+</body>
+</html>
